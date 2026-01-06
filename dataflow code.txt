@@ -1,0 +1,17 @@
+let
+  Source = Sql.Database("sqldatabasebronze.database.windows.net", "CreditCardDB"),
+  #"Navigation 1" = Source{[Schema = "dbo", Item = "customer_with_personal_details"]}[Data],
+  #"Added custom" = Table.TransformColumnTypes(Table.AddColumn(#"Navigation 1", "AgeGroup", each if [Customer_Age] <= 30 then "20-30"
+else if [Customer_Age]  > 30 and [Customer_Age] <= 40 then "31-40"
+else if [Customer_Age] > 40 and [Customer_Age]  <= 50 then "41-50"
+else if [Customer_Age] > 50 and [Customer_Age] <= 60 then "51-60"
+else if [Customer_Age] > 60 then "60+"
+else "UNKNOWN"), {{"AgeGroup", type text}}),
+  #"Added custom 1" = Table.TransformColumnTypes(Table.AddColumn(#"Added custom", "IncomeGroup", each if [Income] < 35000 then "Low"
+else if [Income] >= 35000 and [Income] < 70000 then "Med"
+else if [Income] >= 70000 then "High" 
+else "UNKNOWN"), {{"IncomeGroup", type text}}),
+  #"Changed column type" = Table.TransformColumnTypes(#"Added custom 1", {{"Client_Num", Int64.Type}}),
+  #"Removed columns" = Table.RemoveColumns(#"Changed column type", {"customer_name", "address", "contact_number"})
+in
+  #"Removed columns"
