@@ -154,4 +154,4 @@ Data quality checks and monitoring
 Shubham Gagare
 Fabric Data Engineer | Power BI | Analytics Engineering
 📍 Pune, India
-![Fabric Certification]([https://github.com/Shubhamdgagare/Microsoft-Fabric-ETL-Pipeline-Weekly-Credit-Card-Report/blob/main/images/Fabric_ETL_Pipeline.PNG](https://github.com/Shubhamdgagare/Microsoft-Fabric-ETL-Pipeline-Weekly-Credit-Card-Report/blob/main/images/data_engineering_certificate.png)?raw=true)
+![Fabric Certification](https://github.com/Shubhamdgagare/Microsoft-Fabric-ETL-Pipeline-Weekly-Credit-Card-Report/blob/main/images/data_engineering_certificate.png?raw=true)
