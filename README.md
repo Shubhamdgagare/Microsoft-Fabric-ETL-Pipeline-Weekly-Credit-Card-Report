@@ -10,7 +10,7 @@ The architecture is designed to be scalable, secure, event-driven, and productio
 
 🏗️ Architecture Diagram
 
-![Fabric ETL Project](./Fabric ETL Pipeline.PNG)
+![Fabric ETL Project](./image/Fabric_ETL_Pipeline.PNG)
 
 📌 The diagram illustrates data ingestion, transformation, storage, security boundaries, and reporting using Microsoft Fabric and OneLake.
 
